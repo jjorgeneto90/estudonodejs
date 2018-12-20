@@ -1,8 +1,8 @@
 const service = require('./service')
 
-Array.prototype.meuMap = function (callback){
+Array.prototype.meuMap = function (callback) {
     const novoArrayMapeado = []
-    for(let indice = 0; indice <= this.length - 1; indice++){
+    for (let indice = 0; indice <= this.length - 1; indice++) {
         const resultado = callback(this[indice], indice)
         novoArrayMapeado.push(resultado)
     }
@@ -10,11 +10,11 @@ Array.prototype.meuMap = function (callback){
     return novoArrayMapeado;
 }
 
-async function main(){
+async function main() {
 
     try {
         const results = await service.obterPessoas('a')
-     // const names = []
+        // const names = []
         // results.results.forEach(item => {
         //     names.push(item.name)
         // });
@@ -22,9 +22,8 @@ async function main(){
         // const names = results.results.map(function (pessoa){
         //     return pessoa.name
         // })
-//teste de arquivo modificado
         //const names = results.results.map((pessoa) => pessoa.name)
-        const names = results.results.meuMap(function (pessoa, indice){
+        const names = results.results.meuMap(function (pessoa, indice) {
             return `[${indice}] - ${pessoa.name}`;
         })
         console.log('resultado', names)
