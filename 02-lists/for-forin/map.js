@@ -22,7 +22,7 @@ async function main(){
         // const names = results.results.map(function (pessoa){
         //     return pessoa.name
         // })
-
+//teste de arquivo modificado
         //const names = results.results.map((pessoa) => pessoa.name)
         const names = results.results.meuMap(function (pessoa, indice){
             return `[${indice}] - ${pessoa.name}`;
