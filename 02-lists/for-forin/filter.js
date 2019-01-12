@@ -52,7 +52,7 @@ async function main() {
             return item.name.toLowerCase().indexOf('lars') !== -1
         })
 
-       // const names = familiaLars.map((pessoa) => pessoa.name)
+        // const names = familiaLars.map((pessoa) => pessoa.name)
         console.log(familiaLars)
     } catch (error) {
         console.error('error', error)
